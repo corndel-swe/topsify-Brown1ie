@@ -16,4 +16,4 @@ AVG(features.acousticness) as average_acousticness, AVG(features.liveness) as av
 FROM artists
 INNER JOIN features, tracks, albums
 WHERE  features.track_id= tracks.id  AND tracks.album_id = albums.id AND albums.artist_id = artists.id
-GROUP BY artist_name
+GROUP BY album_id
